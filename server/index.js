@@ -1,18 +1,20 @@
 import express from 'express';
 import cors from "cors";
 import Connection from './databse/db.js';
-import form from './modal/formSchema.js';
+import userModel from './modal/userSchema.js';
+
 
         
 
 const app=express();
 app.use(cors());
 Connection();
+app.use(express.json())
 
 app.post('/register',async(req,res)=>{
 //    const newUser= new form(req.body)
    try{
-    const newUser=new form(req.body)
+    const newUser=new userModel(req.body)
     const user=await newUser.save();
     res.status(200).json(user)
    }

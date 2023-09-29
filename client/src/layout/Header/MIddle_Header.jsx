@@ -1,7 +1,8 @@
 import { Box, Toolbar } from '@mui/material'
 import React from 'react'
 import {useNavigate} from "react-router-dom"
-import { Container, Deemd, English, Hindi, Icon, Image, Items, Loc, Signin } from './styles'
+import {IoIosMenu} from 'react-icons/io'
+import { Container, Deemd, English, Hindi, Icon, Image, ImageBox, Items, Loc, Menu, Signin } from './styles'
 
 const MIddle_Header = () => {
 
@@ -16,12 +17,12 @@ const MIddle_Header = () => {
         <Toolbar sx={{height:'100%'}}>
             {/* for clg logo */}
             <Icon>
-                <Box width={133}>
+                <ImageBox >
                     {/* img  */}
                   <Image src="https://storage.googleapis.com/ezap-prod/colleges/3615/institute-of-technology-gopeshwar-chamoli-logo.png" alt="" />
 
 
-                </Box>
+                </ImageBox>
                 <Box display={'flex'}   flexDirection={'column'} >
                     
 
@@ -49,6 +50,9 @@ const MIddle_Header = () => {
                 <button onClick={handleLogin}>Login</button>
             </Signin>
 
+            <Menu>
+              <IoIosMenu />
+            </Menu>
         </Toolbar>
     </Container>
   )
