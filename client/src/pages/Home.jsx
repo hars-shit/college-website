@@ -5,6 +5,7 @@ import Redirect from '../components/Home_Page/External/Redirect'
 import Hounrable from '../components/Home_Page/Hounrable/Hounrable'
 import { Box, styled } from '@mui/material'
 import News from '../components/Home_Page/News/News'
+import Activities from '../components/Home_Page/Activities/Activities'
 
 const Color=styled(Box)({
   backgroundColor:"#EEEEEE",
@@ -14,10 +15,11 @@ const Home = () => {
     <>
     <Banner />
     <Hounrable/>
-    <Color>
+    {/* <Color> */}
     <Redirect />
+    <Activities />
     <News />
-    </Color>
+    {/* </Color> */}
     </>
   )
 }

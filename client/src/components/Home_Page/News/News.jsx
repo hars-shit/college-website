@@ -1,41 +1,42 @@
 import { Box, Container, Typography, styled } from "@mui/material";
 import React from "react";
 
+
 import { Link } from "react-router-dom";
 import news from "../../../constant/news";
 
-const Image=styled(Box)({
-    background:"url(./assets/bg.png)",
-    // backgroundRepeat:'no-repeat',
-    backgroundSize:"cover",
-    width:'100%',
-    height:'100%',
-    objectFit:'cover',
-    '& > div':{
-      display:'flex' ,
-      justifyContent:'center',
-      alignItems:'center',
-      flexDirection:'column',
-      height:'100%',
-      '& > div':{
-        marginTop:30,
-        display:'flex' ,
-        justifyContent:'center',
-        alignItems:'center',
-        flexDirection:'row',
-        gap:10,
-      }
+const NewAct = () => {
+    const Image=styled(Box)({
+        background:"url(./assets/bg.png)",
+        // backgroundRepeat:'no-repeat',
+        backgroundSize:"cover",
+        width:'100%',
+        height:'100%',
+        objectFit:'cover',
+        '& > div':{
+          display:'flex' ,
+          justifyContent:'center',
+          alignItems:'center',
+          flexDirection:'column',
+          height:'100%',
+          '& > div':{
+            marginTop:30,
+            display:'flex' ,
+            justifyContent:'center',
+            alignItems:'center',
+            flexDirection:'row',
+            gap:10,
+          }
 
-    }
-   
-})
-const News= () => {
+        }
+       
+    })
   return (
    
     <Container style={{padding:0,overflow:'hidden', height:'445px'}} maxWidth={'100%'} >
 
 
-    <Box  display={'flex'} maxWidth={'100%'} flexDirection={'column'}>
+    <Box  display={'flex'} maxWidth={'100%'}>
       {/* for news  */}
       <Box  display={'flex'} justifyContent={'center'} alignItems={'center'} flexDirection={'column'}  width={'70%'} gap={5}>
       <Box fontSize={'32px'} fontWeight={700}  color="#7E1717">ITG-NEWS</Box>
@@ -59,6 +60,7 @@ const News= () => {
               </Box>
             ))
         }
+       
       </Box>
        {/* for second row  */}
        <Box display={'flex'}
@@ -68,7 +70,7 @@ const News= () => {
             width={'100%'}>
       
       {
-          news.map(data=>(
+         news.map(data=>(
             <>
         <Box  marginRight={'20px'}>
             <img src={data.img} alt="" />
@@ -111,4 +113,4 @@ const News= () => {
   );
 };
 
-export default News;
+export default NewAct;
