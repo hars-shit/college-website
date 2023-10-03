@@ -6,6 +6,7 @@ import Hounrable from '../components/Home_Page/Hounrable/Hounrable'
 import { Box, styled } from '@mui/material'
 import News from '../components/Home_Page/News/News'
 import Activities from '../components/Home_Page/Activities/Activities'
+import News1 from '../components/Home_Page/News/News1'
 
 const Color=styled(Box)({
   backgroundColor:"#EEEEEE",
@@ -16,9 +17,10 @@ const Home = () => {
     <Banner />
     <Hounrable/>
     {/* <Color> */}
-    <Redirect />
+    {/* <Redirect /> */}
     <Activities />
-    <News />
+    {/* <News1 /> */}
+    <News1 />
     {/* </Color> */}
     </>
   )
